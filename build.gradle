@@ -1,0 +1,19 @@
+plugins {
+    id "java"
+    id "com.diffplug.spotless" version "6.18.0"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+tasks.jar {
+    manifest.attributes["Main-Class"] = "app2.App2"
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
+}
